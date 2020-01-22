@@ -1,0 +1,76 @@
+/*
+path:       ~/projects/notes/css/menu.css
+user:       klassiker [mrdotx]
+github:     https://github.com/notes
+date:       2020-01-22T11:14:18+0100
+*/
+
+#TOC {
+    margin-top: 15px
+}
+
+#TOC ul {
+    background-color: #181a1b;
+    color: #181a1b;
+    width: 100%;
+    list-style: none;
+    position: fixed;
+    top: 0;
+    float: left;
+    margin: 0;
+    padding: 0
+}
+
+#TOC ul a {
+    display: block;
+    text-decoration: none;
+    font-weight: 700;
+    font-size: 12px;
+    line-height: 32px;
+    padding: 0 15px;
+    font-family: "HelveticaNeue", "Helvetica Neue", Helvetica, Arial, sans-serif
+}
+
+#TOC ul li {
+    position: relative;
+    float: left;
+    margin: 0;
+    padding: 0
+}
+
+#TOC ul li.current-menu-item {
+    background: #ddd
+}
+
+#TOC ul li:hover {
+    background: #f6f6f6
+}
+
+#TOC ul ul {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background: #fff;
+    width: 200px;
+    padding: 0
+}
+
+#TOC ul ul li {
+    float: none;
+    width: 200px
+}
+
+#TOC ul ul a {
+    line-height: 120%;
+    padding: 10px 15px
+}
+
+#TOC ul ul ul {
+    top: 0;
+    left: 100%
+}
+
+#TOC ul li:hover>ul {
+    display: block
+}

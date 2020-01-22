@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="" xml:lang="">
+<head>
+  <meta charset="utf-8" />
+  <meta name="generator" content="pandoc" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
+  <title>Notes</title>
+  <style>
+      code{white-space: pre-wrap;}
+      span.smallcaps{font-variant: small-caps;}
+      span.underline{text-decoration: underline;}
+      div.column{display: inline-block; vertical-align: top; width: 50%;}
+  </style>
+  <!--[if lt IE 9]>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv-printshiv.min.js"></script>
+  <![endif]-->
+  <link rel=stylesheet href="css/menu.css" />
+  <link rel=stylesheet href="css/style.css" />
+  
+  <div style="margin-top:30px">
+</head>
+<body>
+<nav id="TOC" role="doc-toc">
+<ul>
+<li><a href="#markdown">1. Markdown</a><ul>
+<li><a href="#überschriften">1.1 Überschriften</a></li>
+<li><a href="#hervorheben-und-betonen">1.2 Hervorheben und Betonen</a></li>
+<li><a href="#geordnete-listen">1.3 Geordnete Listen</a></li>
+<li><a href="#ungeordnete-listen">1.4 Ungeordnete Listen</a></li>
+<li><a href="#taskliste">1.5 Taskliste</a></li>
+<li><a href="#verschachtelte-listen">1.6 Verschachtelte Listen</a></li>
+<li><a href="#tabellen">1.7 Tabellen</a></li>
+<li><a href="#blockzitate">1.8 Blockzitate</a></li>
+<li><a href="#verknüpfungen">1.9 Verknüpfungen</a></li>
+<li><a href="#code">1.10 Code</a></li>
+<li><a href="#fussnoten">1.11 Fussnoten</a></li>
+<li><a href="#inline-fussnoten">1.12 Inline-Fussnoten</a></li>
+<li><a href="#horizontale-linien">1.13 Horizontale Linien</a></li>
+<li><a href="#inhaltsblöcke">1.14 Inhaltsblöcke</a></li>
+</ul></li>
+<li><a href="#notes">Notes</a></li>
+</ul>
+</nav>
+<h1 id="markdown">1. Markdown</h1>
+<h2 id="überschriften">1.1 Überschriften</h2>
+<pre><code># Überschrift H1
+## Überschrift H2
+### Überschrift H3
+#### Überschrift H4
+##### Überschrift H5
+###### Überschrift H6</code></pre>
+<h2 id="hervorheben-und-betonen">1.2 Hervorheben und Betonen</h2>
+<pre><code>Hervorheben (kursiv):   *Beispiel* oder _Beispiel_
+Betonen (fett):         **Beispiel** oder __Beispiel__
+Hervorheben + Betonen:  ***Beispiel*** oder ___Beispiel___
+Durchstreichen:         ~~Beispiel~~</code></pre>
+<h2 id="geordnete-listen">1.3 Geordnete Listen</h2>
+<pre><code>1. Nummeriertes Listenelement
+2. Nummeriertes Listenelement
+3. Nummeriertes Listenelement</code></pre>
+<h2 id="ungeordnete-listen">1.4 Ungeordnete Listen</h2>
+<pre><code>- Ungeordnetes Listenelement
+- Ungeordnetes Listenelement
+- Ungeordnetes Listenelement
+
++ Ungeordnetes Listenelement
++ Ungeordnetes Listenelement
++ Ungeordnetes Listenelement
+
+* Ungeordnetes Listenelement
+* Ungeordnetes Listenelement
+* Ungeordnetes Listenelement</code></pre>
+<h2 id="taskliste">1.5 Taskliste</h2>
+<pre><code>- [ ] unchecked
+- [x] checked</code></pre>
+<h2 id="verschachtelte-listen">1.6 Verschachtelte Listen</h2>
+<pre><code>Geordnet:
+    1. Erste Ebene
+        1. Zweite Ebene
+
+Ungeordnet:
+    - Erste Ebene
+        - Zweite Ebene</code></pre>
+<h2 id="tabellen">1.7 Tabellen</h2>
+<pre><code>|Links  |Zentriert  |Rechts |
+|:------|:---------:|------:|
+|1      |1          |1      |
+|2      |2          |2      |
+|3      |3          |3      |</code></pre>
+<h2 id="blockzitate">1.8 Blockzitate</h2>
+<pre><code>&gt; Ein zitierter Absatz
+&gt;&gt; Ein zitierter Absatz innerhalb eines Zitats</code></pre>
+<h2 id="verknüpfungen">1.9 Verknüpfungen</h2>
+<pre><code>[Text zum Link](http://beispiel.com/)
+
+[Text zum Link][Verweis]
+…
+[Verweis]: http://beispiel.com/
+
+&lt;http://Beispiel.com&gt;
+
+&lt;max@mustermann.de&gt;</code></pre>
+<h2 id="code">1.10 Code</h2>
+<p>Mindestens vier Leerzeichen oder einen Tabulator um einen Codeblock zu erzeugen</p>
+<h2 id="fussnoten">1.11 Fussnoten</h2>
+<pre><code>Ein Text mit einer Fussnote [^1].
+…
+[^1]: Die Fussnote am Ende des Dokuments.</code></pre>
+<h2 id="inline-fussnoten">1.12 Inline-Fussnoten</h2>
+<pre><code>Ein Text mit einer Fussnote [^Dies ist die eigentliche Fussnote.].</code></pre>
+<h2 id="horizontale-linien">1.13 Horizontale Linien</h2>
+<pre><code>***
+---
+___
+* * *
+- - -
+_ _ _</code></pre>
+<h2 id="inhaltsblöcke">1.14 Inhaltsblöcke</h2>
+<pre><code>`/kapitel1.txt`
+
+`/programm.py`
+
+`/tabelle.csv`</code></pre>
+<h1 id="notes">Notes</h1>
+<p>convert markdown files into html5</p>
+<p><img src="screenshot.png" /></p>
+</body>
+</html>
