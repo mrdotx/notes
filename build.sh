@@ -1,9 +1,9 @@
 #!/bin/sh
 
 # path:       ~/projects/notes/build.sh
-# user:       klassiker [mrdotx]
+# author:     klassiker [mrdotx]
 # github:     https://github.com/mrdotx/notes
-# date:       2020-01-22T11:09:59+0100
+# date:       2020-02-03T13:20:59+0100
 
 # color variables
 #black=$(tput setaf 0)
