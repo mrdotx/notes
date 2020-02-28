@@ -1,11 +1,11 @@
 #!/bin/sh
 
-# path:       ~/projects/notes/build.sh
+# path:       ~/repos/notes/build.sh
 # author:     klassiker [mrdotx]
 # github:     https://github.com/mrdotx/notes
-# date:       2020-02-24T08:25:34+0100
+# date:       2020-02-28T08:15:08+0100
 
-notes=$HOME/projects/notes
+notes=$HOME/repos/notes
 
 # copy to webserver
 printf ":: Converting to HTML...\n"
