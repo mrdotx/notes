@@ -1,25 +1,30 @@
 #!/bin/sh
 
-# path:       ~/repos/notes/build.sh
+# path:       ~/repos/build.sh
 # author:     klassiker [mrdotx]
-# github:     https://github.com/mrdotx/notes
-# date:       2020-02-28T08:15:08+0100
+# github:     https://github.com/mrdotx/vimwiki-pandoc
+# date:       2020-03-15T12:22:44+0100
 
-notes=$HOME/repos/notes
+notes="$HOME/repos/notes"
 
-# copy to webserver
+# convert markdowns to html
 printf ":: Converting to HTML...\n"
-
 pandoc "$notes"/*.md -s --toc -H "$notes"/template/header.html --metadata pagetitle="Notes" --data-dir="$notes"/ -f markdown -t html5 -o "$notes"/index.html
 
-printf ":: HTML build\n"
-#printf ":: Copy to hermes...\n"
-#rsync --info=progress2 --delete -ac --exclude="*.md" --exclude="*.sh" --exclude="template" "$notes"/ alarm@hermes:/srv/http/notes/
+# copy to webservers
+printf "%s\n" ":: Copy to hermes..."
+if ping -c1 -W1 -q hermes >/dev/null 2>&1; then
+    rsync --info=progress2 --delete -acL "$notes"/ alarm@hermes:/srv/http/notes/
+else
+    printf "%\n" ":: Can not copy files, hermes is not available!"
+fi
 
-#printf ":: Copy to prometheus...\n"
-#rsync --info=progress2 --delete -ac --exclude="*.md" --exclude="*.sh" --exclude="template" "$notes"/ alarm@prometheus:/srv/http/notes/
+printf "%s\n" ":: Copy to prometheus..."
+if ping -c1 -W1 -q prometheus >/dev/null 2>&1; then
+    rsync --info=progress2 --delete -acL "$notes"/ alarm@prometheus:/srv/http/notes/
+else
+    printf "%s\n" ":: Can not copy files, prometheus is not available!"
+fi
 
-#printf ":: Copy completed!\n"
-printf ":: Build complete!\n"
-
-notify-send "Notes" "Build complete!" --icon=messagebox_info
+printf "%s\n" ":: Copy completed!"
+notify-send "Notes" "Copy complete!" --icon=messagebox_info
