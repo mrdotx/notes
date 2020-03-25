@@ -1,11 +1,11 @@
 #!/bin/sh
 
-# path:       ~/repos/build.sh
+# path:       ~/.local/share/repos/notes/build.sh
 # author:     klassiker [mrdotx]
 # github:     https://github.com/mrdotx/vimwiki-pandoc
-# date:       2020-03-15T12:22:44+0100
+# date:       2020-03-25T23:17:18+0100
 
-notes="$HOME/repos/notes"
+notes="$HOME/.local/share/repos/notes"
 
 # convert markdowns to html
 printf ":: Converting to HTML...\n"
