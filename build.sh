@@ -3,25 +3,25 @@
 # path:       /home/klassiker/.local/share/repos/notes/build.sh
 # author:     klassiker [mrdotx]
 # github:     https://github.com/mrdotx/notes
-# date:       2020-05-23T00:20:25+0200
+# date:       2020-05-23T20:21:53+0200
 
 notes="$HOME/.local/share/repos/notes"
 
 # convert markdowns to html
 printf ":: Converting to HTML...\n"
-pandoc "$notes"/*.md -s --toc -H "$notes"/template/header.html --metadata pagetitle="Notes" --data-dir="$notes"/ -f markdown -t html5 -o "$notes"/index.html
+pandoc "$notes/*.md" -s --toc -H "$notes/template/header.html" --metadata pagetitle="Notes" --data-dir="$notes/" -f markdown -t html5 -o "$notes/index.html"
 
 # copy to webservers
 printf "%s\n" ":: Copy to hermes..."
 if ping -c1 -W1 -q hermes >/dev/null 2>&1; then
-    rsync --info=progress2 --delete -acL "$notes"/ alarm@hermes:/srv/http/notes/
+    rsync --info=progress2 --delete -acL "$notes/" alarm@hermes:/srv/http/notes/
 else
     printf "%\n" ":: Can not copy files, hermes is not available!"
 fi
 
 printf "%s\n" ":: Copy to prometheus..."
 if ping -c1 -W1 -q prometheus >/dev/null 2>&1; then
-    rsync --info=progress2 --delete -acL "$notes"/ alarm@prometheus:/srv/http/notes/
+    rsync --info=progress2 --delete -acL "$notes/" alarm@prometheus:/srv/http/notes/
 else
     printf "%s\n" ":: Can not copy files, prometheus is not available!"
 fi
