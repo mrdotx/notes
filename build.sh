@@ -2,8 +2,8 @@
 
 # path:       /home/klassiker/.local/share/repos/notes/build.sh
 # author:     klassiker [mrdotx]
-# github:     https://github.com/mrdotx/vimwiki-pandoc
-# date:       2020-04-29T11:11:35+0200
+# github:     https://github.com/mrdotx/notes
+# date:       2020-05-23T00:20:25+0200
 
 notes="$HOME/.local/share/repos/notes"
 
