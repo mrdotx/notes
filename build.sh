@@ -3,13 +3,13 @@
 # path:       /home/klassiker/.local/share/repos/notes/build.sh
 # author:     klassiker [mrdotx]
 # github:     https://github.com/mrdotx/notes
-# date:       2020-10-30T23:05:17+0100
+# date:       2020-10-31T09:38:10+0100
 
 notes="$HOME/.local/share/repos/notes"
 
 # convert markdowns to html
 printf ":: Converting to HTML...\n"
-pandoc "$notes/*.md" -s --toc -H "$notes/template/header.html" --metadata pagetitle="Notes" --data-dir="$notes/" -f markdown -t html5 -o "$notes/index.html"
+pandoc "$notes"/*.md -s --toc -H "$notes/template/header.html" --metadata pagetitle="Notes" --data-dir="$notes/" -f markdown -t html5 -o "$notes/index.html"
 
 # copy to webservers
 printf "%s\n" ":: Copy to hermes..."
