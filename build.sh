@@ -1,9 +1,9 @@
 #!/bin/sh
 
-# path:       /home/klassiker/.local/share/repos/notes/build.sh
-# author:     klassiker [mrdotx]
-# github:     https://github.com/mrdotx/notes
-# date:       2020-10-31T09:38:10+0100
+# path:   /home/klassiker/.local/share/repos/notes/build.sh
+# author: klassiker [mrdotx]
+# github: https://github.com/mrdotx/notes
+# date:   2021-01-15T13:38:36+0100
 
 notes="$HOME/.local/share/repos/notes"
 
