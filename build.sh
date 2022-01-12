@@ -3,7 +3,7 @@
 # path:   /home/klassiker/.local/share/repos/notes/build.sh
 # author: klassiker [mrdotx]
 # github: https://github.com/mrdotx/notes
-# date:   2021-04-19T15:05:21+0200
+# date:   2022-01-12T20:45:31+0100
 
 notes="$HOME/.local/share/repos/notes"
 
@@ -14,14 +14,14 @@ pandoc "$notes"/*.md -s --toc -H "$notes/template/header.html" --metadata pageti
 # copy to webservers
 printf "%s\n" ":: Copy to hermes..."
 if ping -c1 -W1 -q hermes >/dev/null 2>&1; then
-    rsync --info=progress2 --delete -acLh "$notes/" alarm@hermes:/srv/http/notes/
+    rsync --info=progress2 --delete -acLh "$notes/" hermes:/srv/http/notes/
 else
     printf "%\n" ":: Can not copy files, hermes is not available!"
 fi
 
 printf "%s\n" ":: Copy to prometheus..."
 if ping -c1 -W1 -q prometheus >/dev/null 2>&1; then
-    rsync --info=progress2 --delete -acLh "$notes/" alarm@prometheus:/srv/http/notes/
+    rsync --info=progress2 --delete -acLh "$notes/" prometheus:/srv/http/notes/
 else
     printf "%s\n" ":: Can not copy files, prometheus is not available!"
 fi
