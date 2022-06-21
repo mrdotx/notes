@@ -3,7 +3,7 @@
 # path:   /home/klassiker/.local/share/repos/notes/build.sh
 # author: klassiker [mrdotx]
 # github: https://github.com/mrdotx/notes
-# date:   2022-01-14T13:54:37+0100
+# date:   2022-06-21T20:17:46+0200
 
 notes="$HOME/.local/share/repos/notes"
 
@@ -28,5 +28,6 @@ fi
 
 printf "%s\n" ":: Copy completed!"
 notify-send \
+    -u low \
     "Notes" \
     "Copy complete!"
