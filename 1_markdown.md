@@ -1,25 +1,3 @@
----
-title:           Markdown
-subtitle:        Cheat sheet for the experienced Markdown user
-author:          klassiker [mrdotx]
-date:            2022-08-25T08:57:08+0200
-numbersections:  true
-autoEqnLabels:   true
-papersize:       a4
-linestretch:     1.5
-geometry:
-- top=25mm
-- left=40mm
-- right=20mm
-- bottom=20mm
-header-includes: |
-    \usepackage{fancyhdr}
-    \pagestyle{fancy}
-    \fancyhead[CO,CE]{Markdown}
-    \fancyfoot[CO,CE]{klassiker [mrdotx]}
-    \fancyfoot[LE,RO]{\thepage}
----
-
 # 1. Markdown
 
 ## 1.1 Headers
@@ -40,15 +18,13 @@ header-includes: |
 
 ## 1.3 Lists
 
-### 1.3.1 Ordered
-
     1. Ordered list item
         1. Ordered sub-list
     2. Ordered list item
         - Unordered sub-list
     3. Ordered list item
 
-### 1.3.2 Unordered
+## 1.4 Unordered List
 
     - Unordered list item
     - Unordered list item
@@ -62,25 +38,25 @@ header-includes: |
     * Unordered list item
     * Unordered list item
 
-### 1.3.3 Tasks
+## 1.5 Tasks
 
     - [ ] unchecked
-    - [X] checked
+    - [x] checked
 
-## 1.4 Tables
+## 1.6 Tables
 
     | Left | Center | Right |
     | :--- | :----: | ----: |
-    | 1    | 1      | 1     |
-    | 2    | 2      | 2     |
-    | 3    | 3      | 3     |
+    | 1    |1       |1      |
+    | 2    |2       |2      |
+    | 3    |3       |3      |
 
-## 1.5 Blockquotes
+## 1.7 Blockquotes
 
     > Blockquote
     >> Sub-blockquote
 
-## 1.6 Links
+## 1.8 Links
 
     [Link text](https://example.com/ "Hover Text")
 
@@ -92,21 +68,21 @@ header-includes: |
 
     <john@doe.org>
 
-## 1.7 Codeblock
+## 1.9 Codeblock
 
 At least four spaces or a tab to create a codeblock.
 
 Inline `code` has `back-ticks around` it.
 
-## 1.8 Highlighting
+## 1.10 Highlighting
 
 ```python
 #!/usr/bin/env python3
 """
-path:       /home/klassiker/.local/share/repos/python/link_parser.py
-author:     klassiker [mrdotx]
-github:     https://github.com/mrdotx/python
-date:       2020-07-09T14:54:45+0200
+path:   /home/klassiker/.local/share/repos/python/link_parser.py
+author: klassiker [mrdotx]
+github: https://github.com/mrdotx/python
+date:   2020-07-09T14:54:45+0200
 """
 
 import sys
@@ -268,19 +244,17 @@ Supported languages:
 - xslt ('*.xsl', '*.xslt')
 - yaml ('*.yaml', '*.yml')
 
-## 1.9 Footnote
-
-### 1.9.1 Standard
+## 1.11 Footnote
 
     A text with a footnote [^1].
     …
     [^1]: the footnote at the end of the document.
 
-### 1.9.2 Inline
+## 1.12 Inline footnote
 
     A text with a footnote [^This is the actual footnote.].
 
-## 1.10 Horizontal rule
+## 1.13 Horizontal rule
 
     ***
     ---
@@ -289,7 +263,7 @@ Supported languages:
     - - -
     _ _ _
 
-## 1.11 Content blocks
+## 1.14 Content blocks
 
     `/chapter1.txt`
 
