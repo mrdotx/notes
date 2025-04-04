@@ -3,11 +3,17 @@
 # path:   /home/klassiker/.local/share/repos/notes/build.sh
 # author: klassiker [mrdotx]
 # github: https://github.com/mrdotx/notes
-# date:   2022-08-25T15:31:16+0200
+# date:   2025-04-04T05:03:37+0200
 
 # config
 notes="$HOME/.local/share/repos/notes"
 destination_path="/srv/http/notes/"
+
+# color variables
+reset="\033[0m"
+bold="\033[1m"
+blue="\033[94m"
+cyan="\033[96m"
 
 # help
 script=$(basename "$0")
@@ -29,7 +35,8 @@ help="$script [-h/--help] -- script to build notes with pandoc and sync to webse
     destination_path = $destination_path"
 
 convert() {
-    printf ":: Converting to HTML...\n"
+    printf "%b%b::%b %bconvert to html%b\n" \
+        "$bold" "$blue" "$reset" "$bold" "$reset"
     pandoc \
         "$notes"/*.md \
         --from markdown \
@@ -44,8 +51,9 @@ convert() {
 
 copy() {
     for webserver in "$@"; do
-        printf ":: Copy to %s...\n" \
-            "$webserver"
+        printf "%b%b::%b %bcopy to%b %b%s:%s%b\n" \
+            "$bold" "$blue" "$reset" "$bold" "$reset" \
+            "$cyan" "$webserver" "$destination_path" "$reset"
         if ping -c1 -W1 -q "$webserver" >/dev/null 2>&1; then
             rsync \
                 --info=progress2 \
@@ -53,8 +61,8 @@ copy() {
                 -acLh "$notes/" \
                 "$webserver":"$destination_path"
         else
-            printf ":: Cannot copy files, %s is not available!\n" \
-                "$webserver"
+            printf "cannot copy files, %b%s%b is not available!\n" \
+            "$cyan" "$webserver" "$reset"
         fi
     done
 }
