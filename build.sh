@@ -2,8 +2,8 @@
 
 # path:   /home/klassiker/.local/share/repos/notes/build.sh
 # author: klassiker [mrdotx]
-# github: https://github.com/mrdotx/notes
-# date:   2025-04-04T05:03:37+0200
+# url:    https://github.com/mrdotx/notes
+# date:   2025-08-15T03:43:58+0200
 
 # config
 notes="$HOME/.local/share/repos/notes"

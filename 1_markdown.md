@@ -2,7 +2,7 @@
 title:           Markdown
 subtitle:        Cheat sheet for the experienced Markdown user
 author:          klassiker [mrdotx]
-date:            2022-08-25T08:57:08+0200
+date:            2025-08-15T03:42:25+0200
 numbersections:  true
 autoEqnLabels:   true
 papersize:       a4
@@ -103,15 +103,15 @@ Inline `code` has `back-ticks around` it.
 ```python
 #!/usr/bin/env python3
 """
-path:       /home/klassiker/.local/share/repos/python/link_parser.py
-author:     klassiker [mrdotx]
-github:     https://github.com/mrdotx/python
-date:       2020-07-09T14:54:45+0200
+path:   /home/klassiker/.local/share/repos/python/link_parser.py
+author: klassiker [mrdotx]
+url:    https://github.com/mrdotx/python
+date:   2025-08-15T03:39:57+0200
 """
 
 import sys
 from urllib.parse import urlparse
-import requests
+from urllib.request import urlopen
 from bs4 import BeautifulSoup
 
 HELP = """link_parser.sh -- script to grab links from websites
@@ -129,8 +129,8 @@ try:
     SITE = URL_PART.scheme + "://" + URL_PART.netloc
     SITE_PATH = URL_PART.path
 
-    PAGE = requests.get(str(SITE + SITE_PATH))
-    SOUP = BeautifulSoup(PAGE.content, 'html.parser')
+    PAGE = urlopen(str(SITE + SITE_PATH))
+    SOUP = BeautifulSoup(PAGE, 'html.parser')
     LINK_LIST = SOUP.find_all('a')
 
     for link in LINK_LIST:
