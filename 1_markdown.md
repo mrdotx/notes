@@ -2,7 +2,7 @@
 title:           Markdown
 subtitle:        Cheat sheet for the experienced Markdown user
 author:          klassiker [mrdotx]
-date:            2026-05-30T04:37:00+0200
+date:            2026-07-05T05:11:01+0200
 numbersections:  true
 autoEqnLabels:   true
 papersize:       a4
@@ -103,7 +103,7 @@ Inline `code` has `back-ticks around` it.
 ```python
 #!/bin/python
 """
-path:   /home/klassiker/.local/share/repos/python/link_parser.py
+path:   /home/klassiker/Projects/repos/python/link_parser.py
 author: klassiker [mrdotx]
 url:    https://github.com/mrdotx/python
 date:   2025-08-15T03:39:57+0200

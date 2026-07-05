@@ -1,12 +1,12 @@
 #!/bin/sh
 
-# path:   /home/klassiker/.local/share/repos/notes/build.sh
+# path:   /home/klassiker/Projects/repos/notes/build.sh
 # author: klassiker [mrdotx]
 # url:    https://github.com/mrdotx/notes
-# date:   2026-03-31T05:35:05+0200
+# date:   2026-07-05T05:11:15+0200
 
 # config
-notes="$HOME/.local/share/repos/notes"
+notes="$HOME/Projects/repos/notes"
 destination_path="/srv/http/notes/"
 
 # color variables for the interactive shell
